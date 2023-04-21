@@ -1,6 +1,6 @@
 package tk.devmello.mellolib.devlogger.util.storage;
 
-import com.google.gson.Gson;
+
 import tk.devmello.mellolib.devlogger.Logger;
 import tk.devmello.mellolib.devlogger.util.condition.Expectation;
 import tk.devmello.mellolib.devlogger.util.condition.Magnitude;
@@ -24,7 +24,7 @@ public class Storage {
     /**
      * Gson object used for parsing json
      */
-    public static Gson gson = new Gson();
+    //public static Gson gson = new Gson();
 
     /**
      * Out directory file
