@@ -116,7 +116,7 @@ public class Item<T> {
             case BOOLEAN:
                 return Boolean.valueOf(rawValue);
             case ARRAYLIST:
-                return Storage.gson.fromJson(rawValue, ArrayList.class);
+                return null;
             case OTHER:
                 logger.fault.check("Are you sure you want the raw value of an object of type other?");
                 return rawValue;
@@ -135,7 +135,7 @@ public class Item<T> {
         if(!type.equals(ItemType.ARRAYLIST)) {
             return type + ":" + value.toString();
         }else{
-            return type + ":" + Storage.gson.toJson(value);
+            return type + ":";// + Storage.gson.toJson(value);
         }
     }
 
