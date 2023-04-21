@@ -1,6 +1,7 @@
 package tk.devmello.mellolib.math.controllers.control1D;
 
-import me.wobblyyyy.pathfinder2.math.MinMax;
+
+import tk.devmello.mellolib.math.misc.MinMax;
 
 public class MiniPID {
     private double proportional;
