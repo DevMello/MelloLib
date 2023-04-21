@@ -1,3 +1,16 @@
+plugins {
+    
+    id 'maven-publish'
+}
+
+ext {
+    PUBLISH_GROUP_ID = 'tk.devmello'
+    PUBLISH_ARTIFACT_ID = 'mellolib'
+    PUBLISH_VERSION = '1.0.0'
+    projectName = 'tk.devmello'
+    projectVersion = 'v1.0.0-alpha'
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -9,10 +22,18 @@ dependencies {
     compileOnly 'androidx.appcompat:appcompat:1.2.0'
 }
 
+repositories {
+    mavenCentral()
+}
+
 configurations.all {
     resolutionStrategy {
         force 'androidx.core:core-ktx:1.6.0'
     }
+}
+
+repositories {
+    mavenCentral()
 }
 
 android {
@@ -46,3 +67,6 @@ android {
         }
     }
 }
+
+
+apply from: '../release-aar.gradle'

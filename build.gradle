@@ -13,6 +13,24 @@ buildscript {
     }
 }
 
+
+
+plugins {
+
+    id("maven-publish")
+}
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = "tk.devmello"
+            version = "v1.0.1-alpha"
+            artifactId = 'core'
+        }
+    }
+}
+
 allprojects {
     repositories {
         google()
@@ -21,6 +39,4 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+
